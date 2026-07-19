@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Explorador de Audio por Pares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Explorador de Audio por Pares</h1>
+
+    <div class="upload-zone" onclick="loadAudioFolder()" title="Clic para reintentar la carga de la carpeta">
+        <span id="upload-status">Cargando carpeta 'audio' automáticamente...</span>
+    </div>
+
+    <div class="sticky-controls">
+        <div class="control-row">
+            <div class="now-playing" id="now-playing-text">Esperando carga de audios...</div>
+            
+            <label class="autoplay-control" title="Activa para reproducir el siguiente track automáticamente al terminar">
+                <span>Rep. Continua</span>
+                <span class="switch">
+                    <input type="checkbox" id="autoplay-toggle" checked>
+                    <span class="slider"></span>
+                </span>
+            </label>
+
+            <button type="button" class="btn btn-theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">🌙 Modo Noche</button>
+        </div>
+        <div class="control-row">
+            <div class="speed-control">
+                <label style="font-size:0.8rem; color:var(--text-muted)">Velocidad:</label>
+                <input type="range" id="speed-slider" min="0.5" max="1.5" step="0.01" value="1.0">
+                <span id="speed-display" style="font-size:0.85rem; font-weight:bold;">1.00x</span>
+            </div>
+            
+            <div style="display: flex; gap: 8px;">
+                <button class="btn" style="border-color: var(--accent-color); color: var(--accent-color);" onclick="shuffleList()" title="Mezclar palabras aleatoriamente dentro de sus grupos">🎲 Random</button>
+                <button class="btn" style="border-color: var(--text-muted); color: var(--text-muted);" onclick="resetStraight()" title="Restablecer el orden original">📋 Straight</button>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="floating-play-pause" onclick="togglePlayPause()">II</button>
+
+    <div id="permanent-undo-zone">
+        <button class="btn-undo-discreet" id="btn-undo" onclick="triggerUndo()">Deshacer</button>
+    </div>
+
+    <div class="pairs-list" id="pairs-container">
+        <div id="group-easy-container" class="group-container" style="display: none;">
+            <div class="group-title easy-title">🟢 PALABRAS FÁCILES (EASY)</div>
+            <div id="group-easy-list" class="group-container" style="margin-bottom:0;"></div>
+        </div>
+
+        <div id="group-hard-container" class="group-container" style="display: none;">
+            <div class="group-title hard-title">🔴 PALABRAS DIFÍCILES (HARD)</div>
+            <div id="group-hard-list" class="group-container" style="margin-bottom:0;"></div>
+        </div>
+
+        <div id="group-pending-container" class="group-container">
+            <div class="group-title pending-title" id="pending-title-header" style="display: none;">⚪ PENDIENTES DE REVISAR</div>
+            <div id="group-pending-list" class="group-container" style="margin-bottom:0;"></div>
+        </div>
+    </div>
+
+    <div class="debug-containers">
+        <div class="debug-section saved-section">
+            <div class="control-row" style="margin-bottom: 10px;">
+                <span style="font-weight:bold; color:var(--saved-color); font-size:0.85rem;">✓ Guardados</span>
+                <button class="btn" style="padding: 3px 8px; font-size: 0.75rem;" onclick="copyList('debug-output')">Copiar</button>
+            </div>
+            <textarea id="debug-output" readonly placeholder="Pares guardados..."></textarea>
+        </div>
+
+        <div class="debug-section deleted-section">
+            <div class="control-row" style="margin-bottom: 10px;">
+                <span style="font-weight:bold; color:var(--delete-color); font-size:0.85rem;">✕ Descartados</span>
+                <button class="btn" style="padding: 3px 8px; font-size: 0.75rem;" onclick="copyList('debug-deleted-output')">Copiar</button>
+            </div>
+            <textarea id="debug-deleted-output" readonly placeholder="Pares ocultados..."></textarea>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

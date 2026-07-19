@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "texto": "To fall for",
+    "archivo": "0001 To fall for.mp3"
+  },
+  {
+    "id": 2,
+    "texto": "Ser engañado o creer algo demasiado fácilmente.",
+    "archivo": "0002 Ser engañado o creer algo demasiado fácilmente..mp3"
+  },
+  {
+    "id": 3,
+    "texto": "Buy nice or buy twice",
+    "archivo": "0003 Buy nice or buy twice.mp3"
+  },
+  {
+    "id": 4,
+    "texto": "Compra bueno o compra dos veces.",
+    "archivo": "0004 Compra bueno o compra dos veces..mp3"
+  },
+  {
+    "id": 5,
+    "texto": "Make do",
+    "archivo": "0005 Make do.mp3"
+  },
+  {
+    "id": 6,
+    "texto": "Arreglárselas con lo que hay.",
+    "archivo": "0006 Arreglárselas con lo que hay..mp3"
+  },
+  {
+    "id": 7,
+    "texto": "Peace of mind",
+    "archivo": "0007 Peace of mind.mp3"
+  },
+  {
+    "id": 8,
+    "texto": "Paz mental o tranquilidad.",
+    "archivo": "0008 Paz mental o tranquilidad..mp3"
+  },
+  {
+    "id": 9,
+    "texto": "Hold back",
+    "archivo": "0009 Hold back.mp3"
+  },
+  {
+    "id": 10,
+    "texto": "Detenerse a sí mismo de actuar demasiado rápido.",
+    "archivo": "0010 Detenerse a sí mismo de actuar demasiado rápido..mp3"
+  },
+  {
+    "id": 11,
+    "texto": "Talk yourself into",
+    "archivo": "0011 Talk yourself into.mp3"
+  },
+  {
+    "id": 12,
+    "texto": "Convencerse a uno mismo de hacer algo.",
+    "archivo": "0012 Convencerse a uno mismo de hacer algo..mp3"
+  },
+  {
+    "id": 13,
+    "texto": "Treat yourself",
+    "archivo": "0013 Treat yourself.mp3"
+  },
+  {
+    "id": 14,
+    "texto": "Hacer algo agradable por ti mismo a propósito, sin culpa.",
+    "archivo": "0014 Hacer algo agradable por ti mismo a propósito, sin culpa..mp3"
+  },
+  {
+    "id": 15,
+    "texto": "Humble beginnings",
+    "archivo": "0015 Humble beginnings.mp3"
+  },
+  {
+    "id": 16,
+    "texto": "Orígenes humildes.",
+    "archivo": "0016 Orígenes humildes..mp3"
+  },
+  {
+    "id": 17,
+    "texto": "Stardom",
+    "archivo": "0017 Stardom.mp3"
+  },
+  {
+    "id": 18,
+    "texto": "Estrellato.",
+    "archivo": "0018 Estrellato..mp3"
+  },
+  {
+    "id": 19,
+    "texto": "Resilience",
+    "archivo": "0019 Resilience.mp3"
+  },
+  {
+    "id": 20,
+    "texto": "Resiliencia o capacidad de superación.",
+    "archivo": "0020 Resiliencia o capacidad de superación..mp3"
+  },
+  {
+    "id": 21,
+    "texto": "Foray",
+    "archivo": "0021 Foray.mp3"
+  },
+  {
+    "id": 22,
+    "texto": "Incursión o debut. (Hacer un intento en una actividad o campo nuevo para ti).",
+    "archivo": "0022 Incursión o debut. (Hacer un intento en una actividad o campo nuevo para ti)..mp3"
+  },
+  {
+    "id": 23,
+    "texto": "Teaching her the ropes",
+    "archivo": "0023 Teaching her the ropes.mp3"
+  },
+  {
+    "id": 24,
+    "texto": "Enseñar los principios básicos o el oficio.",
+    "archivo": "0024 Enseñar los principios básicos o el oficio..mp3"
+  },
+  {
+    "id": 25,
+    "texto": "Catapulted her to fame",
+    "archivo": "0025 Catapulted her to fame.mp3"
+  },
+  {
+    "id": 26,
+    "texto": "Catapultó a la fama.",
+    "archivo": "0026 Catapultó a la fama..mp3"
+  },
+  {
+    "id": 27,
+    "texto": "Household name",
+    "archivo": "0027 Household name.mp3"
+  },
+  {
+    "id": 28,
+    "texto": "Nombre muy conocido por todos.",
+    "archivo": "0028 Nombre muy conocido por todos..mp3"
+  },
+  {
+    "id": 29,
+    "texto": "Rest on her laurels",
+    "archivo": "0029 Rest on her laurels.mp3"
+  },
+  {
+    "id": 30,
+    "texto": "Dormirse en los laureles.",
+    "archivo": "0030 Dormirse en los laureles..mp3"
+  },
+  {
+    "id": 31,
+    "texto": "He-adon",
+    "archivo": "0031 He-adon.mp3"
+  },
+  {
+    "id": 32,
+    "texto": "Directamente y sin rodeos. (Chocar de frente o abordar un problema cara a cara).",
+    "archivo": "0032 Directamente y sin rodeos. (Chocar de frente o abordar un problema cara a cara)..mp3"
+  },
+  {
+    "id": 33,
+    "texto": "Distigmatize",
+    "archivo": "0033 Distigmatize.mp3"
+  },
+  {
+    "id": 34,
+    "texto": "Desestigmatizar.",
+    "archivo": "0034 Desestigmatizar..mp3"
+  },
+  {
+    "id": 35,
+    "texto": "Underserved",
+    "archivo": "0035 Underserved.mp3"
+  },
+  {
+    "id": 36,
+    "texto": "Desatendidas o de bajos recursos.",
+    "archivo": "0036 Desatendidas o de bajos recursos..mp3"
+  },
+  {
+    "id": 37,
+    "texto": "Perseverance",
+    "archivo": "0037 Perseverance.mp3"
+  },
+  {
+    "id": 38,
+    "texto": "Perseverancia.",
+    "archivo": "0038 Perseverance..mp3"
+  },
+  {
+    "id": 39,
+    "texto": "Rise above",
+    "archivo": "0039 Rise above.mp3"
+  },
+  {
+    "id": 40,
+    "texto": "Superar o elevarse por encima de.",
+    "archivo": "0040 Superar o elevarse por encima de..mp3"
+  },
+  {
+    "id": 41,
+    "texto": "Life kept throwing her curveballs",
+    "archivo": "0041 Life kept throwing her curveballs.mp3"
+  },
+  {
+    "id": 42,
+    "texto": "La vida le seguía poniendo obstáculos inesperados.",
+    "archivo": "0042 La vida le seguía poniendo obstáculos inesperados..mp3"
+  },
+  {
+    "id": 43,
+    "texto": "When the going gets tough the tough get going",
+    "archivo": "0044 Cuando las cosas se ponen difíciles, los fuertes entran en acción..mp3"
+  },
+  {
+    "id": 44,
+    "texto": "Cuando las cosas se ponen difíciles, los fuertes entran en acción.",
+    "archivo": "0044 Cuando las cosas se ponen difíciles, los fuertes entran en acción..mp3"
+  },
+  {
+    "id": 45,
+    "texto": "Burning the candle at both ends",
+    "archivo": "0045 Burning the candle at both ends.mp3"
+  },
+  {
+    "id": 46,
+    "texto": "Trabajar demasiado duro sin descansar.",
+    "archivo": "0046 Trabajar demasiado duro sin descansar..mp3"
+  },
+  {
+    "id": 47,
+    "texto": "On cloud nine",
+    "archivo": "0047 On cloud nine.mp3"
+  },
+  {
+    "id": 48,
+    "texto": "En el séptimo cielo o extremadamente feliz.",
+    "archivo": "0048 En el séptimo cielo o extremadamente feliz..mp3"
+  },
+  {
+    "id": 49,
+    "texto": "Chasing rainbows",
+    "archivo": "0049 Chasing rainbows.mp3"
+  },
+  {
+    "id": 50,
+    "texto": "Perseguir fantasías o sueños poco realistas.",
+    "archivo": "0050 Perseguir fantasías o sueños poco realistas..mp3"
+  }
+]
