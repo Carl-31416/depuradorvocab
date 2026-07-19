@@ -58,24 +58,26 @@ function toggleTheme() {
 document.documentElement.setAttribute('data-theme', 'light');
 
 // FUNCIÓN CLAVE: Carga automática desde la carpeta 'audio' sin JSON ni base de datos
+// FUNCIÓN CLAVE: Carga automática desde la carpeta 'audio' sin JSON ni base de datos
 async function loadAudioFolder() {
-    uploadStatus.textContent = "Cargando lista de audios...";
+    uploadStatus.textContent = "Cargando..."; // Texto reducido al mínimo
+    const uploadZone = document.querySelector('.upload-zone');
+
     try {
-        // En lugar de escanear la carpeta, leemos el inventario oficial
         const response = await fetch('datos.json');
-        if (!response.ok) throw new Error("No se encontró el archivo datos.json");
+        if (!response.ok) throw new Error("Error de archivo");
         
-        // Convertimos el texto del JSON a una lista de JavaScript
         const datos = await response.json();
         
-        // Transformamos tu JSON plano a la estructura exacta que ya usa el resto de tu código
         const files = datos.map(item => ({
-            name: item.texto, // Lo que se muestra en pantalla
-            url: `./audio/${item.archivo}` // La ruta real del mp3
+            name: item.texto,
+            url: `./audio/${item.archivo}` 
         }));
 
         allFiles = files;
-        uploadStatus.textContent = `Lista cargada: ${allFiles.length} audios listos.`;
+        
+        // OPTIMIZACIÓN DE ESPACIO: Ocultamos toda la caja de estado superior
+        if (uploadZone) uploadZone.style.display = 'none';
         
         buildPairs();
         renderPairs();
@@ -83,8 +85,9 @@ async function loadAudioFolder() {
         if(structuredPairs.length > 0) playPair(0, 0);
 
     } catch (error) {
-        console.error("Error al cargar los audios:", error);
-        uploadStatus.innerHTML = "Error: Verifica que datos.json exista.";
+        console.error(error);
+        // Eliminamos el texto "Error: Verifica que datos.json exista."
+        uploadStatus.innerHTML = "Error"; 
     }
 }
 
