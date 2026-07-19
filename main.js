@@ -321,17 +321,15 @@ function stopCurrentAudio() {
 }
 
 function playAudioStream(url, fileName) {
-    const ctx = getAudioContext();
     stopCurrentAudio(); // Pausa la pista anterior
 
-    // Solo creamos el nodo de conexión si no existe aún
-    if (!currentSource) {
-        currentSource = ctx.createMediaElementSource(currentAudioElement);
-        currentSource.connect(ctx.destination);
-    }
+    // Eliminamos todo el ruteo de AudioContext (ctx.createMediaElementSource)
+    // Dejamos que el motor nativo HTML5 maneje el archivo directamente
 
     currentAudioElement.src = url;
     currentAudioElement.playbackRate = globalSpeed;
+    
+    // Mantenemos la preservación de tono nativa
     currentAudioElement.preservesPitch = true; 
     currentAudioElement.mozPreservesPitch = true;
     currentAudioElement.webkitPreservesPitch = true;
@@ -350,7 +348,6 @@ function playAudioStream(url, fileName) {
     nowPlayingText.textContent = fileName;
     updateUIFocus();
 }
-
 function goToNext() {
     if (currentPairIndex === null) return;
     if (currentTrackInPair === 0) {
