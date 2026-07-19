@@ -551,42 +551,102 @@ textarea {
 }
 
 /* AJUSTES DE DIMENSIONES ESPECÍFICOS PARA MÓVIL */
+/* AJUSTES DE DIMENSIONES ESPECÍFICOS PARA MÓVIL */
 @media (max-width: 600px) {
     body {
-        padding: 10px;
-        padding-bottom: 40vh; 
+        padding: 8px;
+        padding-bottom: 120px; /* Espacio para el botón flotante */
     }
+    
     .container {
         max-width: 100%;
     }
+
+    /* Transformamos el bloque en una cuadrícula (Grid) */
     .pair-block {
-        min-height: auto; /* Permite que el bloque se ajuste dinámicamente al texto */
+        display: grid;
+        min-height: auto;
+        /* Fila 1: Contenido completo. Fila 2: Botones de acción */
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        grid-template-rows: auto 44px;
+        grid-template-areas: 
+            "content content content content"
+            "easy hide hard nav";
     }
-    .pair-content-wrapper {
+
+    /* Asignamos cada elemento a su área en la cuadrícula */
+    .pair-content-wrapper { 
+        grid-area: content; 
+        padding: 12px; 
+        gap: 12px;
+    }
+    
+    .btn-easy-left { 
+        grid-area: easy; 
+        width: 100%; 
+        border-right: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color); 
+    }
+    
+    .btn-hide-left { 
+        grid-area: hide; 
+        width: 100%; 
+        border-right: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color); 
+    }
+    
+    .btn-hard-right { 
+        grid-area: hard; 
+        width: 100%; 
+        border-left: none;
+        border-right: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color); 
+    }
+    
+    .pair-nav-right { 
+        grid-area: nav; 
+        width: 100%; 
+        flex-direction: row; /* Los botones de siguiente/anterior lado a lado */
+        border-left: none; 
+        border-top: 1px solid var(--border-color); 
+    }
+
+    .btn-nav-step {
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+    }
+    .btn-nav-step:last-child {
+        border-right: none;
+    }
+
+    /* El track y su botón de reproducir se apilan verticalmente para no cortar texto */
+    .track-cell {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
         padding: 10px;
-        gap: 8px;
     }
-    .btn-easy-left, .btn-hide-left, .btn-hard-right {
-        width: 45px;
-        font-size: 0.7rem;
-    }
-    .pair-nav-right {
-        width: 50px;
-    }
-    .track-name-text {
-        font-size: 0.85rem;
-    }
+
     .btn-inline-play {
-        height: 38px;
-        padding: 0 10px;
-        font-size: 0.75rem;
+        width: 100%;
+        justify-content: center;
+        height: 44px; /* Tamaño táctil ideal */
     }
+
+    /* Anclamos el botón de Play general al fondo de la pantalla para evitar que se desborde */
     #floating-play-pause {
-        width: 48px;
-        height: 48px;
-        left: 10px;
-        font-size: 1rem;
+        position: fixed;
+        top: auto !important; /* Anula el top dinámico que inyecta el JS */
+        bottom: 25px !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
+
     .debug-containers {
         grid-template-columns: 1fr;
     }
